@@ -11,13 +11,6 @@ return {
         }
       })
       mason_lspconfig.setup({
-        ensure_installed = {
-          "lua_ls",
-          "cssls",
-          "tailwindcss",
-          "html",
-        },
-
         automatic_installation = true,
       })
     end

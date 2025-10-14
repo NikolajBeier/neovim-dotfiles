@@ -1,7 +1,6 @@
 require("config.lazy")
 require "opts"
 require "keymaps"
-require "launch"
 
 vim.keymap.set('n', 'x', '<Cmd>Neotree<CR>')
 
