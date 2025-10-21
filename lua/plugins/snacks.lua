@@ -5,6 +5,9 @@ return {
   ---@type snacks.Config
   opt = {
     explorer = { enabled = true },
+    dashboard = {
+      enabled = true,
+    },
     indent = {
       enabled = true,
       priority = 1,
