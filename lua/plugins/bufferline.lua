@@ -6,16 +6,20 @@ return {
     vim.opt.termguicolors = true,
     require("bufferline").setup({
       options = {
-        mode = "tabs",
+        close_command = function(n) Snacks.bufdelete(n) end,
+        right_mouse_command = function(n) Snacks.bufdelete(n) end,
+        diagnostics = "nvim_lsp",
+        always_show_bufferline = false,
         offsets = {
           {
-            filetype = "neo-tree",
-            text = "Nvim Tree",
+            filetype = "snacks_layout_box",
+            text = "Explorer",
+            highlight = "Directory",
             separator = true,
             text_align = "left",
           },
         },
-        },
-      })
-    end
+      },
+    })
+  end
 }

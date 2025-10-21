@@ -18,10 +18,17 @@ return {
           floats = "dark",
         },
       })
-
-      vim.cmd("colorscheme tokyonight")
-
-      SetColor()
     end
   },
+  {
+    "catppuccin/nvim",
+    name = "catppuccin",
+    config = function()
+      require("catppuccin").setup({
+        transparent_background = true,
+        no_italic = false,
+        no_bold = false,
+      })
+    end,
+  }
 }

@@ -2,12 +2,22 @@ require("config.lazy")
 require "opts"
 require "keymaps"
 
-vim.keymap.set('n', 'x', '<Cmd>Neotree<CR>')
+vim.keymap.set('n', 'x', "<Cmd>:lua Snacks.picker.explorer()<CR>")
+vim.keymap.set("i", "<C-BS>", "<C-w>")
+vim.keymap.set("c", "<C-BS>", "<C-w>")
+vim.keymap.set("n", "<ScrollWheelLeft>", "zL")
+vim.keymap.set("n", "<ScrollWheelRight>", "zl")
+
 
 vim.api.nvim_create_autocmd("InsertEnter", { command = [[set norelativenumber]] })
 vim.api.nvim_create_autocmd("InsertLeave", { command = [[set relativenumber]] })
 
 vim.api.nvim_create_autocmd("VimEnter", {
-	desc = "Open Neotree automatically",
-	command = "Neotree"
+	desc = "Open Explorer automatically",
+	command = ":lua Snacks.picker.explorer()"
+})
+
+vim.api.nvim_create_autocmd("VimEnter", {
+  desc = "Enable indent guides",
+  command = ":lua Snacks.indent.enable()"
 })
