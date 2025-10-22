@@ -3,7 +3,7 @@ return {
   version = "*",
   dependencies = "nvim-tree/nvim-web-devicons",
   config = function()
-    vim.opt.termguicolors = true,
+    vim.opt.termguicolors = true
     require("bufferline").setup({
       options = {
         close_command = function(n) Snacks.bufdelete(n) end,

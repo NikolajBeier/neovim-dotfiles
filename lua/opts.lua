@@ -10,3 +10,15 @@ vim.opt.autoindent = true
 vim.opt.smartindent = true
 
 --vim.opt.wrap = false
+
+-- fold settings
+vim.o.foldenable = true
+
+-- keep folds open
+vim.o.foldlevel = 999
+
+--  folds are defined by a user-defined expression (tree-sitter)
+vim.o.foldmethod = 'expr'
+
+-- let tree-sitter define folds
+vim.o.foldexpr = 'nvim_treesitter#foldexpr()'

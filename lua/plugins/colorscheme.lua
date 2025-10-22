@@ -30,5 +30,15 @@ return {
         no_bold = false,
       })
     end,
+  },
+  {
+    "askfiy/visual_studio_code",
+    priority = 100,
+    config = function()
+      require("visual_studio_code").setup({
+        transparent = true,
+        mode = "dark",
+      })
+    end,
   }
 }

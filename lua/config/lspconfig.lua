@@ -1,1 +1,2 @@
-vim.lsp.config("roslyn", {})
+local lspconfig = require("lspconfig")
+lspconfig.roslyn.setup({})

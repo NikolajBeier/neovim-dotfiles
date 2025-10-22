@@ -3,7 +3,7 @@ return {
   priority = 1000,
   lazy = false,
   ---@type snacks.Config
-  opt = {
+  opts = {
     explorer = { enabled = true },
     dashboard = {
       enabled = true,

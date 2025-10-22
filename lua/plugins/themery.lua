@@ -6,6 +6,7 @@ return {
       themes = {
         "tokyonight",
         "catppuccin",
+        "visual_studio_code",
       },
       livePreview = true,
       transparent_background = true,
